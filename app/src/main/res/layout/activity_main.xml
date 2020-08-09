@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:scaleType="fitXY"
+        android:background="@drawable/example"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        />
+
+    <TextView
+        android:id="@+id/text_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Welcome please Come In"
+        android:maxLines="5"
+        android:fontFamily="sans-serif-medium"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1.5"
+        >
+        <Button
+            android:id="@+id/capture_image_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Capture Image"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:layout_weight="0.5"
+            android:fontFamily="sans-serif-medium"
+            android:background="@android:color/darker_gray"
+            />
+        <Button
+            android:id="@+id/detect_text_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detect Text"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="18sp"
+            android:layout_weight="0.5"
+            android:background="@android:color/holo_purple"
+            />
+        <Button
+            android:id="@+id/clear_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear History"
+            android:textAllCaps="false"
+            android:background="@android:color/holo_red_light"
+            android:fontFamily="sans-serif-medium"
+            android:layout_weight="0.5"
+            android:textSize="18sp"
+            />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/history_listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+</LinearLayout>
